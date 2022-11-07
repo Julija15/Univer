@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher personal account </title>
+</head>
+<body>
+
+<form th:action="@{/teacher/account}" th:object="${group}" method="post">
+    <div>
+    <label>Select a group:</label>
+    <div th:each="group : ${group}">
+        <input type="radio" name="groupName" th:value="${group.groupName}"/>
+        <label th:text="${currentTeacher.getGroups().groupName}"></label>
+        <br>
+    </div>
+    </div>
+    <button>Submit</button>
+</form>
+
+</body>
+</html>
+
+<!--// лист групп, с которых надо выбрать-->

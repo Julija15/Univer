@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/resources/teacher/account.html" value="file://$PROJECT_DIR$/src/main/webapp/resources/teacher" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/resources/teacher/student.html" value="file://$PROJECT_DIR$/src/main/webapp/resources/teacher" />
+      </map>
+    </option>
+  </component>
+</project>

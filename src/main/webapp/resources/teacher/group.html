@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group</title>
+</head>
+<body>
+<p th:text="'Student group: ' + ${group.groupName}></p>
+
+<form th:action="@{/teacher/group}" th:object="${group}" method="post">
+
+<div>
+    <label>Select a student:</label>
+    <div th:each="student : ${student}">
+        <input type="radio" name="studentId" th:value="${studentService.findById(studentId)}"/>
+        <label th:text="${currentTeacher.getGroups().groupName.getSudentId}"></label>
+        <br>
+    </div>
+</div>
+
+<button>Submit</button>
+</form>
+</body>
+</html>

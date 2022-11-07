@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+</head>
+<body>
+
+
+<form th:action="@{/admin/login}" th:object="${adminDto}" method="post">
+    <input placeholder="Name" th:field="*{name}" type="text"/>
+    <br>
+    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+    <br>
+    <input type="password" th:field="*{password}" placeholder="Password"/>
+    <br>
+    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+    <br>
+    <button>Submit</button>
+</form>
+
+</body>
+</html>

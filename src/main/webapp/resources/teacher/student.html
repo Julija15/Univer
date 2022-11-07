@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+<p th:text="'Student group ' + ${group.groupName}"></p>
+<br>
+<form th:action="@{/teacher/student}" th:object="${student}" method="post">
+
+    <select th:field="*{subjectId}">
+        <option th:value="${group.subject.id}" th:text="${group.subject}"></option>
+    </select>
+    <br>
+    <select th:field="*{studentId}">
+        <option th:each="student: ${students}"
+                th:value="${student.id}" th:text="${student.name}">
+        </option>
+    </select>
+    <br>
+    <input type="number" th:field="*{point}" placeholder="point"/>
+    <br>
+    <p th:if="${#fields.hasErrors('point')}" th:errors="*{point}"></p>
+    <br>
+    <button>Submit</button>
+</form>
+</body>
+</html>
